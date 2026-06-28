@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 import httpx
 from google_play_scraper import app as play_scraper
 from bs4 import BeautifulSoup
@@ -8,6 +9,15 @@ import json
 import os
 
 app = FastAPI()
+
+# Konfigurasi CORS
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Bisa diganti dengan domain spesifik untuk keamanan
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 FF_MANIA_URL = "https://www.freefiremania.com.br/free-fire-new-update.html"
 HEADERS = {'User-Agent': 'Mozilla/5.0'}
@@ -67,15 +77,18 @@ async def get_scraping_update():
 
 @app.get("/update")
 async def get_combined_update():
-    
     region_urls = load_client_urls()
-
     api_task, web_task = await asyncio.gather(get_api_update(), get_scraping_update())
 
     return {
-    "status": "success",
-    "SourceUpdate_info": api_task,
-    "GameUpdate_info": web_task,
-    "Region_URLs": region_urls,
-    "Credit": "CGU TEAM",
-}
+        "status": "success",
+        "SourceUpdate_info": api_task,
+        "GameUpdate_info": web_task,
+        "Region_URLs": region_urls,
+        "Credit": "CGU TEAM",
+    }
+
+# Endpoint tambahan untuk health check
+@app.get("/")
+async def root():
+    return {"message": "Free Fire Update API is running", "status": "online"}
