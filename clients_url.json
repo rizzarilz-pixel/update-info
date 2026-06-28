@@ -1,0 +1,46 @@
+{
+    "IND": {
+        "server_login_url": "https://loginbp.ggblueshark.com/MajorLogin",
+        "client_url": "https://client.ind.freefiremobile.com"
+    },
+    "ME": {
+        "server_login_url": "https://loginbp.ggpolarbear.com",
+        "client_url": "https://clientbp.ggpolarbear.com"
+    },
+    "VN": {
+        "server_login_url": "https://loginbp.ggpolarbear.com",
+        "client_url": "https://clientbp.ggpolarbear.com"
+    },
+    "BD": {
+        "server_login_url": "https://loginbp.ggpolarbear.com",
+        "client_url": "https://clientbp.ggpolarbear.com"
+    },
+    "PK": {
+        "server_login_url": "https://loginbp.ggpolarbear.com",
+        "client_url": "https://clientbp.ggpolarbear.com"
+    },
+    "SG": {
+        "server_login_url": "https://loginbp.ggpolarbear.com",
+        "client_url": "https://clientbp.ggpolarbear.com"
+    },
+    "BR": {
+        "server_login_url": "https://loginbp.ggpolarbear.com",
+        "client_url": "https://client.us.freefiremobile.com"
+    },
+    "NA": {
+        "server_login_url": "https://loginbp.ggpolarbear.com",
+        "client_url": "https://client.us.freefiremobile.com"
+    },
+    "ID": {
+        "server_login_url": "https://loginbp.ggpolarbear.com",
+        "client_url": "https://clientbp.ggpolarbear.com"
+    },
+    "RU": {
+        "server_login_url": "https://loginbp.ggpolarbear.com",
+        "client_url": "https://clientbp.ggpolarbear.com"
+    },
+    "TH": {
+        "server_login_url": "https://loginbp.ggpolarbear.com",
+        "client_url": "https://clientbp.ggpolarbear.com"
+    }
+}
